@@ -50,7 +50,7 @@
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                     <%
-                    if(session != null && session.getAttribute("usuario") != null )
+                    if(sesion != null && sesion.getAttribute("usuario") != null )
                     {
 
                     	Bienvenido ${sessionScope.usuario} </p>
@@ -61,7 +61,7 @@
 								</p>
          					</form>;
                     }
-                    else{
+                    if(sesion == null && sesion.getAttribute("usuario") == null ){
                     	<li><a href="login.jsp">Login</a></li>
     					<li><a href="register.jsp">Registrate</a></li>
                     }
