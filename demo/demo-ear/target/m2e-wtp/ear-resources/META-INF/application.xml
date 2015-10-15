@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <description>Archetype for rapid development. This archetype build a parent project with submodules like EAR, EJB, WAR, Util and Persistence model.
+	Useful for Internet Technologies for the web subject of Carlos III University. Computer Science</description>
+  <display-name>demo-ear</display-name>
+  <module>
+    <ejb>demo-ejb-1.0.jar</ejb>
+  </module>
+  <module>
+    <web>
+      <web-uri>demo-web-1.0.war</web-uri>
+      <context-root>/demo-web</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>
