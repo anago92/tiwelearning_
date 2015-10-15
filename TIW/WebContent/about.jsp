@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +49,23 @@
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
+                    <%
+                    if(session != null && session.getAttribute("usuario") != null )
+                    {
+
+                    	Bienvenido ${sessionScope.usuario} </p>
+                        
+                        <form action="ServletSesion" method="GET">
+                         		<p class="logout button"> 
+                              	<input  type="submit" value="Cerrar Sesion" /> 
+								</p>
+         					</form>;
+                    }
+                    else{
+                    	<li><a href="login.jsp">Login</a></li>
+    					<li><a href="register.jsp">Registrate</a></li>
+                    }
+                    %>
                 </ul>
             </div>
             <!--/.nav-collapse -->
