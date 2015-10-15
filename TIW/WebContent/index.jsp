@@ -35,7 +35,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="about.jsp">About</a></li>
 					<li><a href="courses.html">Courses</a></li>
 					<li><a href="fees.html">Fees</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
@@ -50,7 +50,7 @@
 					</li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="login.jsp">Login</a></li>
-					<li><a href="register.html">Registrate</a></li>
+					<li><a href="register.jsp">Registrate</a></li>
 
 				</ul>
 			</div>

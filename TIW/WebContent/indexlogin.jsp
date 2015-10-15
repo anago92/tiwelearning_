@@ -36,7 +36,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right mainNav">
 					<li class="active"><a href="indexlogin.jsp">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="about.jsp">About</a></li>
 					<li><a href="courses.html">Courses</a></li>
 					<li><a href="fees.html">Fees</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>

@@ -61,8 +61,8 @@
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a href="login.html">Login</a></li>
-					<li class="active"><a href="register.html">Registrate</a></li>
+					<li><a href="login.jsp">Login</a></li>
+					<li class="active"><a href="register.jsp">Registrate</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
