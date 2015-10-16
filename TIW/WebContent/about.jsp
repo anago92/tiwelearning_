@@ -53,11 +53,12 @@
                   
                   <%
                     String sesion=request.getParameter("usuario");
-                		if(sesion == null)%>
-                    	<li><a href="login.jsp">Login</a></li>
-    					<li><a href="register.jsp">Registrate</a></li>
+                		if(sesion == null){%>
+                			<li><a href="login.jsp">Login</a></li>
+        					<li><a href="register.jsp">Registrate</a></li>
+                		<% }
                 		
-                		<%if(sesion != null)%> Bienvenido  <%=sesion%> </p>
+                		else{%> Bienvenido ${sessionScope.usuario} </p>
                         
                         <form action="ServletSesion" method="GET">
                          		<p class="logout button"> 
@@ -65,7 +66,7 @@
 								</p>
          					</form>
                     
-                    
+                    <%} %>
                    
                   
                   
