@@ -49,23 +49,41 @@
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
-                    <%
-                    if(sesion != null && sesion.getAttribute("usuario") != null )
-                    {
-
-                    	Bienvenido ${sessionScope.usuario} </p>
+                  <!-- Opcion 1-->
+                  
+                  <%
+                    String sesion=request.getParameter("usuario");
+                    if(sesion != null)%> Bienvenido  <%=sesion%> </p>
                         
                         <form action="ServletSesion" method="GET">
                          		<p class="logout button"> 
                               	<input  type="submit" value="Cerrar Sesion" /> 
 								</p>
-         					</form>;
-                    }
-                    if(sesion == null && sesion.getAttribute("usuario") == null ){
+         					</form>
+                    
+                    <%if(sesion == null)%>
                     	<li><a href="login.jsp">Login</a></li>
     					<li><a href="register.jsp">Registrate</a></li>
-                    }
-                    %>
+                   
+                  
+                  
+                   <!-- Opcion 2
+                   <--%
+                    HttpSession sesion=request.getSession();
+                    if(sesion != null)%> Bienvenido  <--%=sesion%> </p>
+                        
+                        <form action="ServletSesion" method="GET">
+                         		<p class="logout button"> 
+                              	<input  type="submit" value="Cerrar Sesion" /> 
+								</p>
+         					</form>
+                    
+                    <--%if(sesion == null)%>
+                    	<li><a href="login.jsp">Login</a></li>
+    					<li><a href="register.jsp">Registrate</a></li>
+                    -->
+                   
+                 
                 </ul>
             </div>
             <!--/.nav-collapse -->
