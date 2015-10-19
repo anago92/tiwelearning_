@@ -96,7 +96,7 @@
 							</div>
                         </div>  
                         <div class="panel-body" >
-                            <form id="nuevoCursoform" class="form-horizontal" role="form">
+                            <form id="nuevoCursoform" class="form-horizontal" role="form" action="ServletCurso" method="POST" autocomplete="on">
                                 <!--Alerta de registro-->
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Error:</p>
