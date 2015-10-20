@@ -84,7 +84,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h2 class="h2Subtitulo"> Curso ABC </h2>
+				<h2 class="h2Subtitulo"> <%String titulo=(String)session.getAttribute("titulo");%>Curso ABC </h2>
 				<img src="styles/imagenes/board.jpg" class="img-responsive" alt="..." width="650"> 
 			</div>
 			<div class="col-md-4">

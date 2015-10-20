@@ -49,17 +49,24 @@ public class ServletCurso extends HttpServlet {
 		// TODO Auto-generated method stub
 		String titulo;
 		String descripcion;
+		String nivel;
 		String imagen;
 		
-        titulo = request.getParameter("usernamesignup");
-        descripcion = request.getParameter("passwordsignup");
-        imagen = request.getParameter("passwordsignup");
+        titulo = request.getParameter("titulo");
+        descripcion = request.getParameter("descripcionCurso");
+        nivel =request.getParameter("nivelCurso");
+        imagen = request.getParameter("imagenCurso");
+        request.getSession().setAttribute("titulo", "titulo");
+        response.sendRedirect("/Curso.jsp");
         //deberíamos buscar el usuario en la base de datos, pero dado que se escapa de este tema, ponemos un ejemplo en el mismo código
-        if(usu.equals("admin") && pass.equals("admin") && sesion.getAttribute("usuario") == null){
+        if(titulo.equals("Base de datos") && descripcion.equals("Esto es un curso de base de datos") && nivel.equals("Avanzado")){
             //si coincide usuario y password y además no hay sesión iniciada
-            sesion.setAttribute("usuario", usu);
+            request.setAttribute("Base de datos", titulo);
+            request.setAttribute("Este curso trata de base de datos", descripcion);
+            request.setAttribute("Avanzado", nivel);
+            //request.setAttribute("ruta_imagen", imagen);
             //redirijo a página con información de login exitoso
-            response.sendRedirect("indexregister.jsp");
+            response.sendRedirect("Curso.jsp");
         }else{
             //lógica para login inválido
         }
