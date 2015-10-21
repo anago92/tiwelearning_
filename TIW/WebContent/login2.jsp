@@ -1,11 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="assets/css/style3.css" />
+        <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="eLearning is a modern and fully responsive Template by WebThemez.">
 	<meta name="author" content="webThemez.com">
-	<title>eLearning - Free Educational Responsive Web Template </title>
+	<title>About - Techro Bootstrap template</title>
 	<link rel="favicon" href="assets/images/favicon.png">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -18,10 +33,9 @@
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
-</head>
-
-<body>
-	<!-- Fixed navbar -->
+    </head>
+    <body>
+        <!-- Fixed navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
@@ -46,104 +60,61 @@
 							<li><a href="#">Dummy Link3</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class="active"><a href="login.jsp">Login</a></li>
+					<li><a href="register.jsp">Registrate</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</div>
 	<!-- /.navbar -->
-
-	<header id="head" class="secondary">
+        <div class="container">
+            <!-- Codrops top bar -->
+            
+            <header id="head" class="secondary">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<h1>Contact us</h1>
+					<h1>Inicio de sesiÃ³n</h1>
 				</div>
 			</div>
 		</div>
 	</header>
-
-	<!-- container -->
-	<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h3 class="section-title">Your Message</h3>
-						<p>
-						Lorem Ipsum is inting and typesetting in simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the is dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-						</p>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <div id="wrapper">
+                        <div id="login">
+                            <form name="login" action="indexlogin.jsp" method="POST" autocomplete="on"> 
+                                <h1>Log in</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Nombre de Usuario </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="Nombre de Usuario"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> ContraseÃ±a </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="ej: X8df!90EO" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Mantenerme logueado</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" value="login" /> 
+								</p>
+                                <p class="change_link">
+									¿Aún no eres miembro todavia?
+									<a href="register.jsp">Unete a nosotros</a>
+								</p>
+                            </form>
+                        </div>
 						
-						<form class="form-light mt-20" role="form">
-							<div class="form-group">
-								<label>Name</label>
-								<input type="text" class="form-control" placeholder="Your name">
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label>Email</label>
-										<input type="email" class="form-control" placeholder="Email address">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label>Phone</label>
-										<input type="text" class="form-control" placeholder="Phone number">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label>Subject</label>
-								<input type="text" class="form-control" placeholder="Subject">
-							</div>
-							<div class="form-group">
-								<label>Message</label>
-								<textarea class="form-control" id="message" placeholder="Write you message here..." style="height:100px;"></textarea>
-							</div>
-							<button type="submit" class="btn btn-two">Send message</button><p><br/></p>
-						</form>
-					</div>
-					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-6">
-								<h3 class="section-title">Office Address</h3>
-								<div class="contact-info">
-									<h5>Address</h5>
-									<p>5th Street, Carl View - United States</p>
-									
-									<h5>Email</h5>
-									<p>info@webthemez.com</p>
-									
-									<h5>Phone</h5>
-									<p>+09 123 1234 123</p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<h3 class="section-title">Timings</h3>
-								<div class="contact-info">
-									<h5>Monday - Friday</h5>
-									<p>09:00 AM - 6:30 PM</p>
-									
-									<h5>Saturday</h5>
-									<p>Closed</p>
-									
-									<h5>Sunday</h5>
-									<p>Closed</p>
-								</div>
-							</div>
-						</div>
-						<h3 class="section-title">Get connected</h3>
-						<p>
-						Lorem ipsumn qersl ioinm sersoe non urna dolor sit amet, consectetur piesn qersl ioinm sersoe non urna dolor aecena.
-						</p>						
-					</div>
-				</div>
-			</div>
-	<!-- /container -->
-
-	
-
-	<footer id="footer">
+                    </div>
+                </div>  
+            </section>
+        </div>
+        <footer id="footer">
 		<div class="container">
 			<div class="social text-center">
 				<a href="#"><i class="fa fa-twitter"></i></a>
@@ -188,15 +159,11 @@
 	</footer>
 
 
+
+
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/custom.js"></script>
-
-	<!-- Google Maps -->
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	<script src="assets/js/google-map.js"></script>
-
-
-</body>
+    </body>
 </html>

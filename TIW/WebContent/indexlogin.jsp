@@ -22,6 +22,8 @@
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+<jsp:useBean id="login" scope="session" class="JavaBean.login" />
+ <jsp:setProperty name="login" property="username" />  
 </head>
 <body>
 	<!-- Fixed navbar -->
@@ -50,7 +52,7 @@
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
-					Bienvenido ${sessionScope.usuario} </p>
+					Bienvenido <%=login.getusername() %> </p>
                              
                               <form action="ServletSesion" method="GET">
                                		<p class="logout button"> 

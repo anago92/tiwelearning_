@@ -42,7 +42,7 @@ public class ServletSesion extends HttpServlet {
 			String action=(request.getPathInfo()!=null?request.getPathInfo():"");
 	        HttpSession sesion = request.getSession();
 	        sesion.invalidate();
-	        response.sendRedirect("index.jsp");
+	        response.sendRedirect("Index.jsp");
 	}
 
 	/**

@@ -13,7 +13,13 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<jsp:useBean id="curso" scope="session" class="JavaBean.Curso" />
+ <jsp:setProperty name="curso" property="titulo" /> 
+  <jsp:setProperty name="curso" property="descripcion" />  
+   <jsp:setProperty name="curso" property="nivel" />  
+    <jsp:setProperty name="curso" property="imagen" />  
+     <jsp:setProperty name="curso" property="horas" />   
+     <jsp:setProperty name="curso" property="precio" />   
 
 </head>
 <body> 
@@ -84,14 +90,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h2 class="h2Subtitulo"> <%String titulo=(String)session.getAttribute("titulo");%>Curso ABC </h2>
+				<h2 class="h2Subtitulo"> <%=curso.gettitulo()%></h2>
 				<img src="styles/imagenes/board.jpg" class="img-responsive" alt="..." width="650"> 
 			</div>
 			<div class="col-md-4">
 				<h3 style="text-align:left">Descripción del curso</h3>
-					<p style="font-size:18px">Con este curso aprenderás a hacer cosas como tal y cual, 
-					que te servrián apra algo en la vida, pero aún no se sabe qué. Aprenderás la habilidad 
-					de blablabla y otras cosas.
+					<p style="font-size:18px"><%=curso.getdescripcion()%>
 					</p>
 			</div>
 		</div>

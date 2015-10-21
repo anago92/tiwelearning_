@@ -1,9 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Alta de Curso</title>
+  <title>Registro</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Grupo05">
@@ -36,7 +34,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						  </button>
-						  <a class="navbar-brand" href="Index.html">Brand</a>
+							<a class="navbar-brand" href="#"><img src="styles/imagenes/dokulearninglogo.png"></a>
 						</div>
 					</div>	
 
@@ -63,7 +61,7 @@
 								  <ul class="nav nav-pills navbar-right">
 									<li><a href="Index.html">Home</a></li>
 									<li><a href="Login.html">Login</a></li>
-									<li><a href="#">Sign Up</a></li>
+									<li  class="active"><a href="#">Sign Up</a></li>
 								  </ul>
 						</div>	
 					</div>		  	  
@@ -75,7 +73,7 @@
 		<!-- Barra de título -->
 		<div class="jumbotron h1">
 			<div class="container">
-				 Nuevo Curso
+				 Registro
 			</div>	
 		</div>
 
@@ -91,12 +89,16 @@
                         <div class="panel-heading">
 							<div class="row">
 								<div class="col-md-10">
-	                        		<div class="panel-title">Alta de curso</div>
+	                        		<div class="panel-title">Sign Up</div>
 	                        	</div>
+	                        	<div class="col-md-2">	
+	                        		<div style="font-size: 80% text-align:right"><a href="Login.html">Login</a></div>
+								</div>
 							</div>
                         </div>  
                         <div class="panel-body" >
-                            <form name="curso" action="Curso.jsp" method="POST" id="nuevoCursoform" class="form-horizontal" role="form" autocomplete="on">
+                            
+                            <form action="ServletRegister" method="POST" id="signupform" class="form-horizontal" role="form">
                                 <!--Alerta de registro-->
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Error:</p>
@@ -105,58 +107,73 @@
                                     
 								
 	 						 	<div class="form-group">
-                                    <label for="cursoTitulo" class="col-md-3 control-label">T&iacute;tulo</label>
+                                    <label for="userName" class="col-md-3 control-label">Usuario</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="cursoTitulo" placeholder="" required>
-                                    </div>
-                                </div>
-
-
-								<div class="form-group">
-                                    <label for="descripcionCurso" class="col-md-3 control-label">Descripci&oacute;n</label>
-                                    <div class="col-md-9">
-                                        <textarea class="form-control" rows="3" id="descripcionCurso" name="descripcionCurso" type="text" placeholder="" required></textarea>
+                                        <input type="text" class="form-control" name="usernamesignup" placeholder="" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="nivelCurso" class="col-md-3 control-label">T&iacute;tulo</label>
+                                    <label for="password" class="col-md-3 control-label">Contrase&ntilde;a</label>
                                     <div class="col-md-9">
-                                    	<select class="form-control" name="nivelCurso">
-											  <option>B&aacute;sico</option>
-											  <option>Intermedio</option>
-											  <option>Avanzado</option>
-										</select>    
+                                        <input type="password" class="form-control" name="passwordsignup" placeholder="" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="imagenCurso" class="col-md-3 control-label">Imagen</label>
+                                    <label for="confirmPasswd" class="col-md-3 control-label"> Confirmar Cont&ntilde;rasena</label>
                                     <div class="col-md-9">
-                                        <input type="file" class="form-control" accept="image/jpeg, image/png" name="imagenCurso">
+                                        <input type="password" class="form-control" name="confirmPasswd" placeholder="" required>
                                     </div>
                                 </div>
-
 
                                 <div class="form-group">
-                                    <label for="horasCurso" class="col-md-3 control-label">Horas de dedicaci&oacute;n</label>
+                                    <label for="email" class="col-md-3 control-label">Email</label>
                                     <div class="col-md-9">
-                                        <input type="number" min ="0" class="form-control" name="horasCurso" placeholder="" required>
+                                        <input type="email" class="form-control" name="email" placeholder="" required>
                                     </div>
                                 </div>
 
-								<div class="form-group">
-                                    <label for="precioCurso" class="col-md-3 control-label">Precio [ &euro; ]</label>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-md-3 control-label">Nombre</label>
                                     <div class="col-md-9">
-                                        <input type="number" min ="0" class="form-control" name="precioCurso" placeholder="&euro;" required>
+                                        <input type="text" class="form-control" name="firstName" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName" class="col-md-3 control-label">Apellidos</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastName" placeholder="">
                                     </div>
                                 </div>
                                 
+                                <div class="form-group">
+                                    <label for="edad" class="col-md-3 control-label">Edad</label>
+                                    <div class="col-md-9">
+                                        <input type="number" min ="0" max = "150" class="form-control" name="edad" placeholder="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="descripcion" class="col-md-3 control-label">Descripci&oacute;n</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" rows="3" name="descripcionsignup" type="text" placeholder=""></textarea>
+                                    </div>
+                                </div>
+
+								<div class="form-group">
+	                                <label for="interes" class="col-md-3 control-label">Datos de Inter&eacute;s </label>
+	                                <div class="col-md-9">
+	                                    <textarea class="form-control" rows="3" name="interessignup" type="text" placeholder=""></textarea>
+	                                </div>
+								</div>
 
                                 <div class="form-group">
                                     <!-- Button -->                                        
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Crear curso</button> 
+                                        <input type="submit" class="btn btn-info"><i class="icon-hand-right"></i> Sign Up</input> 
                                     </div>
                                 </div>
                                                                 
