@@ -66,9 +66,9 @@
 								  <!--<ol class="breadcrumb">-->
 								  <!--<ul class="nav navbar-nav navbar-center">-->
 								  <ul class="nav nav-pills navbar-right">
-									<li><a href="Index.html">Home</a></li>
-									<li><a href="Login.html">Login</a></li>
-									<li><a href="Registro.html">Sign Up</a></li>
+									<li><a href="Index.jsp">Home</a></li>
+									<li><a href="Login.jsp">Login</a></li>
+									<li><a href="Registro.jsp">Sign Up</a></li>
 								  </ul>
 						</div>	
 					</div>		  	  

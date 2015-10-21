@@ -96,7 +96,7 @@
 							</div>
                         </div>  
                         <div class="panel-body" >
-                            <form name="curso" action="Curso.jsp" method="POST" id="nuevoCursoform" class="form-horizontal" role="form" autocomplete="on">
+                            <form name="curso" action="Curso.jsp" method="POST" id="nuevoCursoform" class="form-horizontal" role="form">
                                 <!--Alerta de registro-->
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Error:</p>
@@ -156,7 +156,8 @@
                                 <div class="form-group">
                                     <!-- Button -->                                        
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Crear curso</button> 
+                                      
+                                    	 <input type="submit" value="Alta Curso" class="btn btn-success"/> 
                                     </div>
                                 </div>
                                                                 
